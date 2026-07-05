@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us Page Design</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-...your-sha512-hash-here..." crossorigin="anonymous" />
+</head>
+
+<style>
+     body {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Poppins", times new roman;
+        background-color: #fff;
+    }
+    
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #002147;
+        padding: 1rem 9%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+        font-family: 'Arial', sans-serif;
+    }
+    
+    .header .images {
+    display: flex;
+    align-items: center;
+    margin-left: -110px; 
+	font-size: 20px;
+}
+
+.header .images a{
+border: none;
+    outline: none;
+    background-color: transparent;
+	color: white;
+    }
+    
+    .header .icons .fas.fa-heart {
+    margin-right: 15px; /* Adjust this value to increase or decrease the space */
+}
+
+.header .icons .fas.fa-shopping-cart {
+    margin-left: 35px; /* Adjust this value to increase or decrease the space */
+}
+    
+    
+    .header .images a:hover {
+    color: #fff; 
+}
+    
+
+.header .text {
+    color: white;
+    margin-left: 20px; /* Adjust the value as per your preference */
+    font-size: 24px;
+    font-weight: 500;
+    flex-grow: 1; /* This will allow the text to take up available space */
+}
+
+
+
+.header .icons {
+    display: flex;
+    align-items: center;
+    margin-right: -90px; 
+    font-size: 20px;
+}
+
+.header .icons a {
+    border: none;
+    outline: none;
+    margin-left: 15px;
+    background-color: transparent;
+    color: #fff; 
+     text-decoration: none;
+}
+
+.header .icons a:hover {
+    color: #d3003f; 
+}
+
+.header .icons div.hover{
+color: #ff1493;
+
+}
+
+    .hero {
+        background-color: #fff;
+        overflow: hidden;
+    }
+
+    .heading h1 {
+        color:  #000000;
+        font-size: 60px;
+        text-align: center;
+        margin-top: 120px;
+         font-family: "Poppins",Georgia;
+    }
+    .heading h1 span{
+        color:  #FF69B4;
+        font-size: 60px;
+        text-align: center;
+        margin-top: 35px;
+        font-family: "Poppins",Georgia;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: 65px auto;
+    }
+
+    .hero-content {
+        flex: 1;
+        width: 600px;
+        margin: 0px 25px;
+    }
+
+    .hero-content h2 {
+        font-size: 38px;
+        color:  #000000;
+        margin-bottom: 30px;
+        color: #191970;
+        margin-left: 10px;
+        font-family: "Poppins",Calisto MT;
+    }
+
+    .hero-content p {
+        font-size: 19px;
+       color:  #000000;
+        line-height: 1.6;
+        width: 600px;
+        margin-bottom: 40px;
+        text-align: justify;
+        margin-left: 10px;
+    }
+
+    .hero-image {
+        flex: 1;
+        width: 600px;
+        height: 350px;
+        margin: auto;
+        margin-top: 10px;
+        margin-left: 140px;
+    }
+
+    img {
+        width: 600px;
+        height: 350px;
+        border-radius: 10px;
+    }
+    
+    .hero-image img:hover {
+        transform: scale(1.1);
+    }
+
+    .about {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        margin-top: -90px;
+        justify-content: space-around;
+        background-color: #fff;
+    }
+
+    .about .about_image img {
+        width: 600px;
+        height: 350px;
+        margin-top: 80px;
+    }
+    
+    .about_image img:hover {
+        transform: scale(1.1);
+    }
+
+    .about .about_tag h1 {
+        font-size: 38px;
+        position: relative;
+        bottom: 10px;
+        margin-bottom: 0px;
+        padding: 0;
+        margin-top: 60px;
+        font-family: "Poppins",Calisto MT;
+        color: #8b008b;
+    }
+
+    .about .about_tag p {
+        line-height: 1.6;
+        width: 600px;
+        text-align: justify;
+        margin-top: 20px;
+        margin-bottom: -10px;
+        font-size: 19px;
+       color: #000000;
+    }
+
+    .services {
+        width: 100%;
+        height: auto;
+        margin: 35px 0;
+    }
+
+    .services .services_box {
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+         margin-top: -120px;
+        justify-content: space-around;
+    }
+
+    .services .services_box .services_card {
+        text-align: center;
+        width: 310px;
+        height: 200px;
+        box-shadow: 0 0 10px #367588;
+        padding: 10px;
+        margin-top: -5px;
+    }
+
+    .services .services_box .services_card i {
+        color: #089da1;
+        font-size: 45px;
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+
+    .services .services_box .services_card h3 {
+        margin-top: -10px;
+        margin-bottom: 50px;
+        margin-top: 0;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .services .services_box .services_card img {
+        width: 150px;
+        height: auto;
+        margin-top: 0px;
+        border-radius: 10px;
+    }
+
+   .info {
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.info-content {
+    flex: 1;
+    width: 600px;
+    margin: 0px 25px;
+}
+
+.info-content h2 {
+    font-size: 38px;
+    margin-bottom: 30px;
+    font-family: "Poppins",Calisto MT;
+    margin-left: 70px;
+    color: #e4007c;
+}
+
+.info-content p {
+    font-size: 19px;
+    line-height: 1.6;
+    width: 600px; 
+    margin-bottom: 40px;
+    color: #000000;
+    text-align: justify;
+    margin-left: 70px;
+}
+
+.info-image {
+    flex: 1;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 130px; 
+}
+
+.info-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-width: 600px; 
+}
+
+.info-image img:hover {
+        transform: scale(1.1);
+    }
+
+
+      .main {
+        background-color: #fff;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+         margin-top: 60px;
+    }
+
+    .main-content {
+        flex: 1;
+        width: 600px;
+        margin: 0px 25px;
+        order: 2;
+        text-align: justify; 
+    }
+
+    .main-content h2 {
+        font-size: 38px;
+        margin-bottom: 20px;
+        font-family: "Poppins",Calisto MT;
+        margin-left: 130px;
+        color: #c40233;
+    }
+
+
+    .main-image img:hover {
+        transform: scale(1.1);
+    }
+
+    .main-content p {
+        line-height: 1.6;
+        width: 600px;
+        text-align: justify;
+        margin-top: 30px;
+        margin-bottom: 220px; 
+        font-size: 19px;
+        margin-left: 130px;
+        color: #000000;
+    }
+
+    .main-image img {
+        flex: 1;
+        margin: auto;
+        margin-top: 10px;
+        margin-left: 90px;
+        margin-bottom: 180px;
+        max-width: 600px;
+        max-height: 350px;
+        border-radius: 10px;
+        
+    }
+    
+footer {
+margin-top: 15px;
+}
+
+.foot-panel1 {
+background-color: #1b1b1b;
+color: white;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 0.85rem; 
+}
+
+.foot-panel1 a {
+    color: white;
+    text-decoration: none; 
+  }
+
+.footer-links {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    color: white;
+    height: 50px;
+    align-items: center;
+    font-size:16px;
+    margin-left: 90px;
+}
+
+.footer-links a {
+    text-decoration: none;
+	color: white;
+}
+
+.footer-links a:hover {
+    color: #d3003f; 
+}
+
+</style>
+<body>
+ <?php include 'usernotlogin_header.php'; ?>
+    <section class="hero">
+        <div class="heading">
+            <h1><span>About</span> Us</h1>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to Our Website</h2>
+                <p>Welcome to ReadCycle:Online Book Reselling Platform, your go-to destination for a dynamic online
+                    book reselling experience. Our platform is more than just a marketplace; it's a global community
+                    celebrating the joy of reading. We connect readers worldwide, promote sustainable practices, and
+                    provide an affordable, user-friendly platform for buying, selling, and exchanging books. With a
+                    commitment to supporting independent authors, embracing technology, and ensuring trust through
+                    quality control, we create a space where lifelong learning flourishes.</p>
+              
+            </div>
+            <div class="hero-image">
+                <img src="images\book_img.jpg">
+            </div>
+        </div>
+    </section>
+
+    <div class="about">
+
+        <div class="about_image">
+            <img src="images\aboutus.jpeg">
+        </div>
+        <div class="about_tag">
+            <h1>About Us</h1>
+            <p>Welcome to ReadCycle:Online Book Reselling Platform, your premier destination for a revolutionary online
+                book reselling experience. Our platform is not just about buying and selling books; it's a celebration
+                of literature, a space where readers from around the world come together to exchange ideas,
+                recommendations, and, of course, books. We pride ourselves on being more than just a marketplace –
+                we're a vibrant community dedicated to making the world of books more accessible, affordable, and
+                eco-friendly.</p>
+            
+        </div>
+
+    </div>
+
+    <div class="info">
+        <div class="info-content">
+            <h2>Our Mission</h2>
+            <p>Our mission is multi-faceted: we aim to connect readers worldwide, fostering a sense of camaraderie and
+                shared passion for literature. Simultaneously, we strive to promote sustainable reading practices by
+                encouraging the reuse and resale of books, thereby contributing to environmental responsibility within
+                the publishing industry. We are dedicated to enhancing accessibility to knowledge by providing an
+                affordable and user-friendly platform that empowers individuals to buy, sell, and exchange books
+                easily.</p>
+          
+        </div>
+        <div class="info-image">
+            <img src="images\mission.jpg">
+        </div>
+    </div>
+
+    
+
+    <div class="main">
+    <div class="main-image">
+        <img src="images\our_vision.jpg">
+    </div>
+    <div class="main-content">
+        <h2>Our Vision</h2>
+        <p>The vision of our online book reselling platform is to establish a global community where the joy of
+            reading is celebrated, and access to a diverse array of knowledge is made effortlessly attainable
+            through a seamless and sustainable online experience. "To create a global community where the love for
+            reading is fostered, and access to diverse knowledge is made easy through a seamless and sustainable
+            online book reselling platform."</p>
+        
+    </div>
+    
+</div>
+
+<div class="services">
+
+        <div class="services_box">
+
+            <div class="services_card">
+                <img src="images\fast_delivery.png">
+                <h3>Fast Delivery</h3>
+            </div>
+
+            <div class="services_card">
+                <img src="images\24x7.jpg">
+                <h3>24 x 7 Services</h3>
+            </div>
+
+            <div class="services_card">
+                <img src="images\discount.jpg">
+                <h3>Big Discount</h3>
+            </div>
+
+            <div class="services_card">
+              <img src="images\payy.jpg">
+                <h3>Secure Payment</h3>
+            </div>
+
+        </div>
+
+    </div>
+    <footer>
+        <div class="foot-panel1">
+           <a href="About Us.html"> Back to top </a>
+        </div>
+
+    
+ <div style="background-color: black; padding-top: 30px; text-align: center; color: white; padding-bottom: 60px;  margin-top: 0px;">
+ <h1 style="color: white;">ReadCycle: Online Book Reselling Platform</h1>
+        <h2 style="color: orange;"></h2><br><br>
+
+ <div class="footer-links">
+            <a href="homeNotLogin.php">HOME</a>
+            <a href="About Us.html">ABOUT US</a>
+            <a href="Help Center.html">HELP CENTER</a>
+           
+        </div>
+
+         <a href="https://whatgroupslink.com/lens-whatsapp-group-links/" style="color: white;">
+            <svg xmlns="http://www.w3.org/2000/svg" onmouseover="style.color='green'" onmouseout="style.color='white'" width="40" height="40" style="padding-top: -1000; padding-left: 60;" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg>
+        </a>
+
+     <a href="https://instagram.com/lenskart?igshid=MzRlODBiNWFlZA==" style="color: white;"><svg xmlns="http://www.w3.org/2000/svg" onmouseover="style.color='fuchsia'" onmouseout="style.color='white'" width="40" height="40" style="padding-top:50;padding-left:100" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+      </svg></a>
+      <a href="https://twitter.com/lenskart_com?lang=en" style="color: white;"><svg xmlns="http://www.w3.org/2000/svg" onmouseover="style.color='rgb(47, 143, 233)'" onmouseout="style.color='white'" width="40" height="40" style="padding-top:50;padding-left:100" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+      </svg></a>
+      <a href="https://m.facebook.com/Lenskartindia/photos/a.597413870321262/6948351205227465/?type=3&mibextid=Nif5oz" style="color:white;"><svg xmlns="http://www.w3.org/2000/svg" onmouseover="style.color='blue'" onmouseout="style.color='white'"  width="40" height="40" style="padding-top:50;padding-left:100" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+      </svg></a>
+		
+    </footer>
+</body>
+
+</html>

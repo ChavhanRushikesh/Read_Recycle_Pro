@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sell on Readcycle</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+
+     body {
+	 
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Poppins", times new roman;
+        background-color: #fff;
+    }
+    
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #002147;
+        padding: 1rem 9%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+		 font-family: 'Arial', sans-serif;
+       
+    }
+    
+    .header .images {
+    display: flex;
+    align-items: center;
+    margin-left: -120px; 
+}
+
+.header .images a{
+border: none;
+    outline: none;
+    background-color: transparent;
+	color: white;
+	font-size: 20px;
+    }  
+    
+    .header .images a:hover {
+    color: #fff; 
+}
+    
+
+.header .text{
+color: #fff;
+margin-left: -1050px;
+font-size: 23px;
+}
+
+.header .button {
+  background-color: #0a7e8c;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+   margin-top: 4px;
+   margin-right: -100px;
+   text-decoration: none;
+}
+
+.header .button:hover {
+        background-color: #01796f;
+    }
+
+
+.section-1-container {
+width: 1500px;
+margin: 0 auto;
+margin-top: 80px;
+height : 100%;
+position: relative; /* Add relative positioning */
+}
+
+.section-1-container img {
+  width: 100%; /* Adjust the width as needed */
+  height: 380px;
+  margin-top: 5px;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay-text {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  display: inline;
+  line-height: 58px;
+  margin-bottom: 50px; /* Adjusted margin */
+  color: black; /* Moved color property from span to here */
+}
+
+ .overlay-text span{
+        color:  blue;
+        font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    display: inline;
+    line-height: 58px;
+	 margin-bottom: 50px;
+    }
+.overlay-button {
+  position: absolute;
+  bottom: -55px; /* Adjust the distance from the bottom as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1d2951;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.overlay-button:hover {
+        background-color: #01796f;
+    }
+
+.section-2 {
+width: 100%;
+height: 122px;
+background-color: white;
+box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+}
+
+.section-2-container {
+width: 1280px;
+margin: 0 auto;
+height : 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Horizontally center the columns */
+}
+
+.column {
+    flex: 0 0 calc(33.33% - 2em); /* Adjust the width of each column */
+    max-width: calc(33.33% - 2em); /* Adjust the maximum width of each column */
+    margin: 1em; /* Adjust the margin between columns */
+}
+
+/* Additional styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .column {
+        flex: 0 0 calc(50% - 2em); /* Adjust the width of each column for smaller screens */
+        max-width: calc(50% - 2em); /* Adjust the maximum width of each column for smaller screens */
+    }
+}
+
+.card {
+  padding: 3.1em 1.25em;
+  text-align: center;
+  background: linear-gradient(0deg, #397ef6 10px, transparent 10px);
+  background-repeat: no-repeat;
+  background-position: 0 0.62em;
+  box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
+  border-radius: 0.5em;
+  transition: 0.5s;
+  cursor: pointer;
+   width: 90%; /* Adjust the width as needed */
+  max-width: 5000px; /* Adjust the maximum width as needed */
+  border: 1px solid #ccc;
+  height: 470px;
+}
+
+.card .icon {
+  font-size: 2.5em;
+  height: 170px;
+  width: 170px;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.card .icon:hover {
+  transform: scale(1.1);
+}
+
+
+.card h3 {
+  font-size: 1.3em;
+  margin: 1em 0 1.4em 0;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #070024;
+}
+.card p {
+  line-height: 1.8em;
+  color: #000;
+  text-align: justify;
+}
+
+
+
+.section-2 h2 {
+  color: black;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  margin-left: 360px;
+}
+
+.section-2 h2 span {
+  color: blue;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+footer {
+margin-top: 15px;
+}
+
+.foot-panel1 {
+background-color: #1b1b1b;
+color: white;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 0.85rem; 
+}
+
+.foot-panel1 a {
+    color: white;
+    text-decoration: none; 
+  }
+
+.footer-links {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    color: white;
+    height: 50px;
+    align-items: center;
+    font-size:16px;
+    margin-left: 90px;
+}
+
+.footer-links a {
+    text-decoration: none;
+	color: white;
+}
+
+.footer-links a:hover {
+    color: #d3003f; 
+}
+
+</style>
+</head>
+<body>
+<header class="header">
+<div class="images">
+<a href="homepage.php">
+<i class="fas fa-arrow-left"></i>
+</a>
+</div>
+<div class="text">
+        <h4 style="color: #fff;">Sell On ReadCycle</h4>
+        </div>
+        <a href="user_panel.php" class="button">Start Selling</a>
+
+</header>
+
+<section class="section-1">
+<div class="section-1-container">
+  <img src="images/seller.jpg">
+  <div class="overlay">
+    <div class="overlay-text"><span>Sell Books</span> Online<br>
+On ReadCycle</div><br>
+   <a href="user_panel.php" class="overlay-button">Start Selling</a>
+  </div>
+</div>
+</section>
+
+<section class="section-2">
+  <h2><span>Types of Books</span> you can sell at ReadCycle</h2> 
+   <div class="row">
+        <!-- Column One -->
+        <div class="column">
+          <div class="card">
+            <div class="icon">
+              <img src="images/novels.svg">
+            </div>
+            <h3>Novels</h3>
+            <p>
+             It is true that books are man’s best friend. If you aspire to sell books online and target a broader audience of readers, you could opt for novels. You can provide a mix of fictional and non-fictional novels, taking various genres and writers into consideration. From gripping mysteries to heartwarming romance novels, you are sure to find an eager audience via Flipkart. So, curate a diverse collection and reach millions of readers in India.
+            </p>
+          </div>
+        </div>
+        <!-- Column Two -->
+        <div class="column">
+          <div class="card">
+            <div class="icon">
+             <img src="images/image2.svg">
+            </div>
+            <h3>Education and Professional Books</h3>
+            <p>
+             The world of learning is vast and varied. Whether it is a guide for competitive exams that lights up dreams, a manual that becomes the go-to for mastering a skill, or a textbook that forms the backbone of a course, the education category is brimming with opportunities. You can dive into this segment and sell books online that cater to the different needs of learners and build a massive customer base.
+            </p>
+          </div>
+        </div>
+        <!-- Column Three -->
+        <div class="column">
+          <div class="card">
+            <div class="icon">
+               <img src="images/image3.svg">
+            </div>
+            <h3>Business and Economics Books</h3>
+            <p>
+              Being the most dynamic subjects, keeping up with new theories, strategies, and insights regularly is quite essential. This is where you can step in and sell books online that buyers are looking for. By listing such publications, you can become a trusted resource for many. Be it entrepreneurs, students or professionals, your collection can be the guiding light they turn to, helping them gain knowledge about business and economics.
+            </p>
+          </div>
+        </div>
+		 <!-- Column Four -->
+        <div class="row"> <!-- New row for the last two cards -->
+          <div class="column">
+            <div class="card">
+              <div class="icon">
+                 <img src="images/image4.svg">
+              </div>
+              <h3>School Books</h3>
+              <p>
+    Every academic year, students across grades search for textbooks, guides, and reference materials. So, add all subject books from various boards and become a part of a student’s educational journey. Furthermore, Flipkart is the best place to sell books online, as it is the go-to platform for many parents and students. From primary education to higher secondary, offer a broad selection to ensure every student finds the right resources to excel in their studies.            </p>
+            </div>
+          </div>
+           <!-- Column Five -->
+          <div class="column">
+            <div class="card">
+              <div class="icon">
+                 <img src="images/image5.svg">
+              </div>
+              <h3>Vernacular Language Books</h3>
+              <p>
+    India is a land of many languages, fuelling the demand for regional books on Flipkart too. List and sell books online in different languages, and buyers will surely come across your collection. It is a fantastic opportunity to cater to a diverse audience. By offering books in various regional languages, you not only fulfil a significant demand but also widen your customer base, reaching readers from every corner of the country.            </p>
+            </div>
+          </div>
+        </div> <!-- End of new row -->
+      </div>
+
+ <footer>
+        <div class="foot-panel1">
+           <a href="become a reseller.html"> Back to top </a>
+        </div>
+
+    
+ <div style="background-color: black; padding-top: 30px; text-align: center; color: white; padding-bottom: 60px;  margin-top: 0px;">
+ <h1 style="color: white;">ReadCycle: Online Book Reselling Platform</h1>
+        <h2 style="color: orange;"></h2><br><br>
+
+ <div class="footer-links">
+            <a href="homepage.php">HOME</a>
+            <a href="categories.php">CATEGORIES</a>
+            <a href="orders.php">MY ORDERS</a>
+            <a href="become a reseller.html">SELL ON READCYCLE</a>
+            <a href="account.php">ACCOUNT</a>
+            <a href="About_Us.html">ABOUT US</a>
+            <a href="help_center.html">HELP CENTER</a>
+        </div>
+
+         <a href="https://whatgroupslink.com/lens-whatsapp-group-links/" style="color: white;">
+            <svg xmlns="http://www.w3.org/2000/svg" onmouseover="style.color='green'" onmouseout="style.color='white'" width="40" height="40" style="padding-top: 50; padding-left: 60;" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg>
+        </a>
+
+     <a href="https://instagram.com/lenskart?igshid=MzRlODBiNWFlZA==" style="color: white;"><svg xmlns="http://www.w3.org/2000/svg" onmouseover="style.color='fuchsia'" onmouseout="style.color='white'" width="40" height="40" style="padding-top:50;padding-left:100" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+      </svg></a>
+      <a href="https://twitter.com/lenskart_com?lang=en" style="color: white;"><svg xmlns="http://www.w3.org/2000/svg" onmouseover="style.color='rgb(47, 143, 233)'" onmouseout="style.color='white'" width="40" height="40" style="padding-top:50;padding-left:100" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+      </svg></a>
+      <a href="https://m.facebook.com/Lenskartindia/photos/a.597413870321262/6948351205227465/?type=3&mibextid=Nif5oz" style="color:white;"><svg xmlns="http://www.w3.org/2000/svg" onmouseover="style.color='blue'" onmouseout="style.color='white'"  width="40" height="40" style="padding-top:50;padding-left:100" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+      </svg></a>
+		
+    </footer>
+</body>
+</html>

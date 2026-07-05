@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Help Center</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcfafa;
+            color: #333;
+        }
+
+        .header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #002147;
+            padding: 1rem 9%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        .header .images {
+            display: flex;
+            align-items: center;
+            margin-left: -120px; 
+        }
+
+        .header .images a{
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: white;
+			font-size:22px;
+        }
+
+        .header .images a:hover {
+            color: #fff; 
+        }
+
+        .header .text {
+    color: white;
+    margin-left: 20px; /* Adjust the value as per your preference */
+    font-size: 24px;
+    font-weight: 500;
+    flex-grow: 1; /* This will allow the text to take up available space */
+}
+
+
+        .help-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .help-options {
+            list-style-type: none; /* Remove default list bullets */
+            padding: 0;
+        }
+
+        .help-option {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 22px;
+        }
+
+        .help-option:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Style for the text rollover effect */
+        .help-option span:hover {
+            text-decoration: underline;
+        }
+
+        /* Center the heading */
+        .headline {
+            text-align: center;
+            margin-top: 120px;
+			font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="images">
+            <a href="homepage.php">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+        <div class="text">
+            <h4 style="color: #fff;">Help Center</h4>
+        </div>
+    </header>
+    <!-- Add the new heading below the header -->
+    <div class="headline">
+        <h2 style="color: #000;">Help Center</h2>
+    </div>
+    <div class="help-container">
+        <ul class="help-options">
+            <li class="help-option">
+                <a href="privacy_policy.html">
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+            <li class="help-option">
+                <a href="terms_conditions.html">
+                    <span>Terms and Conditions</span>
+                </a>
+            </li>
+            <li class="help-option">
+                <a href="faq1.html">
+                    <span>FAQ</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
